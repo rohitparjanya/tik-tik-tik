@@ -29,6 +29,7 @@ body{
     font-size: 2cm;
 }
 .fields{
+    margin-top: 0.2cm;
     display: flex;
     justify-content: center;
     align-items: center;

@@ -36,7 +36,7 @@
                 </span>
                 <span class="fields">
                     <p class="inner-text">Purpose:</p>
-                    <select name="purpose" id="mySelect" class="input" required>
+                    <select name="purpose" class="input" required>
                         <option value="office">Office</option>
                         <option value="family">Family</option>
                         <option value="Bday">Bday</option>
@@ -47,7 +47,7 @@
                         <option value="Other">Other</option>
                     </select>
                 </span>
-                <input type="submit" value="ADD"  id="submit-but" onclick="myFunction()">
+                <input type="submit" value="ADD"  id="submit-but">
 
             </form>
 
@@ -60,12 +60,35 @@
             <% for( i of todo_List){%>
                 <div id="each-content">
                     <div id="img">
-
+                        <%if(i.purpose == "Grocery") {%>
+                            <span><i class="fas fa-shopping-basket fa-4x"></i></span>
+                        <%}%>
+                        <%if(i.purpose == "office") {%>
+                            <span><i class="far fa-building fa-4x"></i></span>
+                        <%}%>
+                        <%if(i.purpose == "family") {%>
+                            <span><i class="far fa-kiss-wink-heart fa-4x"></i></span>
+                        <%}%>
+                        <%if(i.purpose == "Bday") {%>
+                            <span><i class="fas fa-birthday-cake fa-4x"></i></span>
+                        <%}%>
+                        <%if(i.purpose == "Anniversary") {%>
+                            <span><i class="fas fa-gifts fa-4x"></i></span>
+                        <%}%>
+                        <%if(i.purpose == "Girlfriends") {%>
+                            <span><i class="fas fa-heart fa-4x"></i></span>
+                        <%}%>
+                        <%if(i.purpose == "Resolutions") {%>
+                            <span><i class="fas fa-dumbbell fa-4x"></i></span>
+                        <%}%>
+                        <%if(i.purpose == "Other") {%>
+                            <span><i class="far fa-grin-tongue fa-4x"></i></span>
+                        <%}%>
                     </div>
                  
                 <div id="overal-context">
                     <ul class="list-context">
-                        <li class="list-item"><%= i.discrirption%></li>
+                        <li class="list-item" style="color:rgb(251,215,43) ;"><%= i.discrirption%></li>
                         <li class="list-item"><%= i.time%></li>
                         <li class="list-item"><%= i.date%></li>
                         <li class="list-item"><%= i.purpose%></li>
