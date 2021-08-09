@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    <title>
+        <%= locals.title %>
+        
+    </title>
+    <link rel="stylesheet" href="/CSS/home.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    </head>
+    <body>
+        
+        <header id= "header">
+            <span class="text-header">TIK</span>
+            <span><i class="fas fa-business-time fa-2x"></i></span>
+            <span class="text-header">TIK</span>
+            <span><i class="fas fa-clock fa-2x "></i></span>
+            <span class="text-header">TIK</span>
+        </header>
+
+        <div id="form-div">
+            <form action="/create-list" method="POST" id="form">
+                <span class="fields">
+                    <p class="inner-text">Discrirption:</p>
+                    <textarea cols="55" rows="10" name="discrirption" placeholder="write your to-do here.." class="input" required></textarea>
+                </span>
+
+                <span class="fields">
+                    <p class="inner-text">Deadline-Time:</p>
+                    <input type="time" name="time" class="input" >
+                </span>
+
+                <span class="fields">
+                    <p class="inner-text">Date:</p>
+                    <input type="date" name="date" class="input" required>
+                </span>
+                <span class="fields">
+                    <p class="inner-text">Purpose:</p>
+                    <select name="purpose" id="mySelect" class="input" required>
+                        <option value="office">Office</option>
+                        <option value="family">Family</option>
+                        <option value="Bday">Bday</option>
+                        <option value="Anniversary">Anniversary</option>
+                        <option value="Girlfriends">Girlfriends</option>
+                        <option value="Grocery">Grocery</option>
+                        <option value="Resolutions">Resolutions</option>
+                        <option value="Other">Other</option>
+                    </select>
+                </span>
+                <input type="submit" value="ADD"  id="submit-but" onclick="myFunction()">
+
+            </form>
+
+
+        </div>
+
+        <div id="content">
+
+            
+            <% for( i of todo_List){%>
+                <div id="each-content">
+                    <div id="img">
+
+                    </div>
+                 
+                <div id="overal-context">
+                    <ul class="list-context">
+                        <li class="list-item"><%= i.discrirption%></li>
+                        <li class="list-item"><%= i.time%></li>
+                        <li class="list-item"><%= i.date%></li>
+                        <li class="list-item"><%= i.purpose%></li>
+
+                    </ul>
+                </div>
+                
+                <span>
+                    <a href="/delete/?id=<%= i._id%>"><i class="fas fa-window-close fa-3x" style="color: rgb(251,215,43);"></i></a>
+                </span>
+
+                </div>
+
+            <%}%>
+
+        </div>
+
+
+        <footer>
+            <div id="footer">
+
+            </div>
+
+
+        </footer>
+
+
+
+    </body>
+    <script src="/js/script.js"></script>
+
+
+
+</html>

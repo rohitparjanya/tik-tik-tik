@@ -1,0 +1,129 @@
+body{
+    background-image: url('/images/tiktiktik.jpeg');
+    margin: 0;
+}
+::placeholder{
+    color: black;
+    font-size: medium;
+}
+
+#header{
+    height:auto;
+    border-radius: 30px;
+    margin-top: 1cm;
+    margin-bottom: 1cm;
+    margin-left:8px;
+    margin-right: 8px;
+    padding: 2px;
+    background-color: rgb(195,59,4);
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.text-header{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-weight: bolder;
+    line-height: 2cm;
+    font-size: 2cm;
+}
+.fields{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#form-div{
+    background-color: rgb(195,59,4);
+    
+    border-radius: 25px;
+    margin-left: 10px;
+    margin-right: 10px;
+    padding: 2px;
+}
+#form{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.inner-text{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: medium;
+    font-weight: bolder;
+}
+
+.input{
+    border-radius: 10px;
+    background-color: rgb(251,215,43);
+}
+
+#submit-but{
+    color: black; margin: 5px; padding: 5px; border-radius:12px; font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; font-weight: bold;width: 50%;
+    background-color: rgb(251,215,43);
+}
+
+#content{
+    width: 100%;
+    margin-top: 0.5cm;
+    margin-left: 5px;
+    margin-right: 5pc;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+#overal-context{
+    width: 60%;
+}
+
+#each-content{
+    margin-top: 0.5cm;
+    background-color:rgb(195,59,4) ;
+    margin-left: 5px;
+    margin-right: 10px;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.list-context{
+    text-decoration: none;
+    list-style-type: none;
+    font-size: medium;
+    font-weight: bolder;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    text-transform: uppercase;
+
+}
+
+.list-item{
+    text-decoration: none;
+    list-style-type: none;
+}
+
+#footer{
+    height: auto;
+    background-color:rgb(195,59,4) ;
+    font-size: x-large;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    display: flex;
+    justify-content: center;
+    text-transform: uppercase;
+    font-weight: bolder;
+    padding: 5px;
+    margin-left: 10px;
+    margin-right: 10px;
+    border-radius: 10px;
+    margin-top: 0.5cm;
+    color:rgb(251, 102, 43) ;
+
+}
+
+#img{
+    height: 50px;
+    width: 50px;
+}
